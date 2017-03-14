@@ -97,7 +97,7 @@ public enum ActionStyle: String {
     case danger = "danger"
 }
 
-public enum ResponseType: String {
+public enum MessageResponseType: String {
     case inChannel = "in_channel"
     case ephemeral = "ephemeral"
 }

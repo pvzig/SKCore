@@ -47,7 +47,7 @@ public final class Message: Equatable {
     public let file: File?
     public var reactions = [Reaction]()
     public var attachments: [Attachment]?
-    public var responseType: ResponseType?
+    public var responseType: MessageResponseType?
     public var replaceOriginal: Bool?
     public var deleteOriginal: Bool?
     
@@ -75,7 +75,7 @@ public final class Message: Equatable {
         file = File(file: dictionary?["file"] as? [String: Any])
         reactions = Reaction.reactionsFromArray(dictionary?["reactions"] as? [[String: Any]])
         attachments = (dictionary?["attachments"] as? [[String: Any]])?.map{Attachment(attachment: $0)}
-        responseType = ResponseType(rawValue: dictionary?["response_type"] as? String ?? "")
+        responseType = MessageResponseType(rawValue: dictionary?["response_type"] as? String ?? "")
         replaceOriginal = dictionary?["replace_original"] as? Bool
         deleteOriginal = dictionary?["delete_original"] as? Bool
     }
