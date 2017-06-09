@@ -24,7 +24,6 @@
 import Foundation
 
 public struct OAuthConfig {
-    
     public let clientID: String
     public let clientSecret: String
     public let state: String

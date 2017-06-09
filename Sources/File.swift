@@ -22,7 +22,6 @@
 // THE SOFTWARE.
 
 public struct File: Equatable {
-
     public let id: String?
     public let created: Int?
     public let name: String?
@@ -77,8 +76,9 @@ public struct File: Equatable {
     public var pinnedTo: [String]?
     public var comments = [String: Comment]()
     public var reactions = [Reaction]()
-    
-    public init(file:[String: Any]?) {
+
+    //swiftlint:disable function_body_length
+    public init(file: [String: Any]?) {
         id = file?["id"] as? String
         created = file?["created"] as? Int
         name = file?["name"] as? String
@@ -131,10 +131,10 @@ public struct File: Equatable {
         stars = file?["num_stars"] as? Int
         isStarred = file?["is_starred"] as? Bool
         pinnedTo = file?["pinned_to"] as? [String]
-        reactions = Reaction.reactionsFromArray(file?["reactions"] as? [[String: Any]])        
+        reactions = Reaction.reactionsFromArray(file?["reactions"] as? [[String: Any]])
     }
-    
-    public init(id:String?) {
+
+    public init(id: String?) {
         self.id = id
         created = nil
         name = nil
@@ -179,8 +179,8 @@ public struct File: Equatable {
         linesMore = nil
         initialComment = nil
     }
-    
-    public static func ==(lhs: File, rhs: File) -> Bool {
+
+    public static func == (lhs: File, rhs: File) -> Bool {
         return lhs.id == rhs.id
     }
 }

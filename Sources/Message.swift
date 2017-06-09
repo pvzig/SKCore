@@ -22,7 +22,6 @@
 // THE SOFTWARE.
 
 public final class Message: Equatable {
-    
     public let type = "message"
     public let subtype: String?
     public var ts: String?
@@ -50,7 +49,7 @@ public final class Message: Equatable {
     public var responseType: MessageResponseType?
     public var replaceOriginal: Bool?
     public var deleteOriginal: Bool?
-    
+
     public init(dictionary: [String: Any]?) {
         subtype = dictionary?["subtype"] as? String
         ts = dictionary?["ts"] as? String
@@ -74,13 +73,13 @@ public final class Message: Equatable {
         comment = Comment(comment: dictionary?["comment"] as? [String: Any])
         file = File(file: dictionary?["file"] as? [String: Any])
         reactions = Reaction.reactionsFromArray(dictionary?["reactions"] as? [[String: Any]])
-        attachments = (dictionary?["attachments"] as? [[String: Any]])?.map{Attachment(attachment: $0)}
+        attachments = (dictionary?["attachments"] as? [[String: Any]])?.map { Attachment(attachment: $0) }
         responseType = MessageResponseType(rawValue: dictionary?["response_type"] as? String ?? "")
         replaceOriginal = dictionary?["replace_original"] as? Bool
         deleteOriginal = dictionary?["delete_original"] as? Bool
     }
-    
-    public init(ts:String?) {
+
+    public init(ts: String?) {
         self.ts = ts
         subtype = nil
         user = nil
@@ -94,8 +93,8 @@ public final class Message: Equatable {
         comment = nil
         file = nil
     }
-    
-    public static func ==(lhs: Message, rhs: Message) -> Bool {
+
+    public static func == (lhs: Message, rhs: Message) -> Bool {
         return lhs.ts == rhs.ts && lhs.user == rhs.user && lhs.text == rhs.text
     }
 }

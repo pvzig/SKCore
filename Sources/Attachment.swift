@@ -22,7 +22,6 @@
 // THE SOFTWARE.
 
 public struct Attachment {
-    
     public let fallback: String?
     public let callbackID: String?
     public let type: String?
@@ -41,7 +40,6 @@ public struct Attachment {
     public let footer: String?
     public let footerIcon: String?
     public let ts: Int?
-    
     public let markdownEnabledFields: Set<AttachmentTextField>?
 
     public init(attachment: [String: Any]?) {
@@ -63,11 +61,30 @@ public struct Attachment {
         ts = attachment?["ts"] as? Int
         fields = (attachment?["fields"] as? [[String: Any]])?.map { AttachmentField(field: $0) }
         actions = (attachment?["actions"] as? [[String: Any]])?.map { Action(action: $0) }
-        
         markdownEnabledFields = (attachment?["mrkdwn_in"] as? [String]).map { Set($0.flatMap(AttachmentTextField.init)) }
     }
-    
-    public init(fallback: String, title: String?, callbackID: String? = nil, type: String? = nil, colorHex: String? = nil, pretext: String? = nil, authorName: String? = nil, authorLink: String? = nil, authorIcon: String? = nil, titleLink: String? = nil, text: String? = nil, fields: [AttachmentField]? = nil, actions: [Action]? = nil, imageURL: String? = nil, thumbURL: String? = nil, footer: String? = nil, footerIcon:String? = nil, ts:Int? = nil, markdownFields: Set<AttachmentTextField>? = nil) {
+
+    public init(
+        fallback: String,
+        title: String?,
+        callbackID: String? = nil,
+        type: String? = nil,
+        colorHex: String? = nil,
+        pretext: String? = nil,
+        authorName: String? = nil,
+        authorLink: String? = nil,
+        authorIcon: String? = nil,
+        titleLink: String? = nil,
+        text: String? = nil,
+        fields: [AttachmentField]? = nil,
+        actions: [Action]? = nil,
+        imageURL: String? = nil,
+        thumbURL: String? = nil,
+        footer: String? = nil,
+        footerIcon: String? = nil,
+        ts: Int? = nil,
+        markdownFields: Set<AttachmentTextField>? = nil
+    ) {
         self.fallback = fallback
         self.callbackID = callbackID
         self.type = type
@@ -88,7 +105,7 @@ public struct Attachment {
         self.ts = ts
         self.markdownEnabledFields = markdownFields
     }
-    
+
     public var dictionary: [String: Any] {
         var attachment = [String: Any]()
         attachment["fallback"] = fallback
@@ -102,8 +119,8 @@ public struct Attachment {
         attachment["title"] = title
         attachment["title_link"] = titleLink
         attachment["text"] = text
-        attachment["fields"] = fields?.map{$0.dictionary}
-        attachment["actions"] = actions?.map{$0.dictionary}
+        attachment["fields"] = fields?.map { $0.dictionary }
+        attachment["actions"] = actions?.map { $0.dictionary }
         attachment["image_url"] = imageURL
         attachment["thumb_url"] = thumbURL
         attachment["footer"] = footer
@@ -115,9 +132,7 @@ public struct Attachment {
 }
 
 public enum AttachmentColor: String {
-    case good = "good"
-    case warning = "warning"
-    case danger = "danger"
+    case good, warning, danger
 }
 
 public enum AttachmentTextField: String {

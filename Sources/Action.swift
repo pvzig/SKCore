@@ -22,15 +22,14 @@
 // THE SOFTWARE.
 
 public struct Action {
-    
     public let name: String?
     public let text: String?
     public let type: String?
     public let value: String?
     public let style: ActionStyle?
     public let confirm: Confirm?
-    
-    public init(action:[String: Any]?) {
+
+    public init(action: [String: Any]?) {
         name = action?["name"] as? String
         text = action?["text"] as? String
         type = action?["type"] as? String
@@ -38,7 +37,7 @@ public struct Action {
         style = ActionStyle(rawValue: action?["style"] as? String ?? "")
         confirm = Confirm(confirm:action?["confirm"] as? [String: Any])
     }
-    
+
     public init(name: String, text: String, style: ActionStyle = .defaultStyle, value: String? = nil, confirm: Confirm? = nil) {
         self.type = "button"
         self.name = name
@@ -47,7 +46,7 @@ public struct Action {
         self.style = style
         self.confirm = confirm
     }
-    
+
     public var dictionary: [String: Any] {
         var dict = [String: Any]()
         dict["name"] = name
@@ -58,28 +57,27 @@ public struct Action {
         dict["confirm"] = confirm?.dictionary
         return dict
     }
-    
+
     public struct Confirm {
-        
         public let title: String?
         public let text: String?
         public let okText: String?
         public let dismissText: String?
-        
-        public init(confirm:[String: Any]?) {
+
+        public init(confirm: [String: Any]?) {
             title = confirm?["title"] as? String
             text = confirm?["text"] as? String
             okText = confirm?["ok_text"] as? String
             dismissText = confirm?["dismiss_text"] as? String
         }
-        
+
         public init(text: String, title: String? = nil, okText: String? = nil, dismissText: String? = nil) {
             self.text = text
             self.title = title
             self.okText = okText
             self.dismissText = dismissText
         }
-        
+
         public var dictionary: [String: Any] {
             var dict = [String: Any]()
             dict["title"] = title

@@ -22,13 +22,12 @@
 // THE SOFTWARE.
 
 public struct DoNotDisturbStatus {
-    
     public var enabled: Bool?
     public var nextDoNotDisturbStart: Int?
     public var nextDoNotDisturbEnd: Int?
     public var snoozeEnabled: Bool?
     public var snoozeEndtime: Int?
-    
+
     public init(status: [String: Any]?) {
         enabled = status?["dnd_enabled"] as? Bool
         nextDoNotDisturbStart = status?["next_dnd_start_ts"] as? Int

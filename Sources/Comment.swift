@@ -22,7 +22,6 @@
 // THE SOFTWARE.
 
 public struct Comment: Equatable {
-    
     public let id: String?
     public let user: String?
     public var created: Int?
@@ -30,8 +29,8 @@ public struct Comment: Equatable {
     public var starred: Bool?
     public var stars: Int?
     public var reactions = [Reaction]()
-    
-    public init(comment:[String: Any]?) {
+
+    public init(comment: [String: Any]?) {
         id = comment?["id"] as? String
         created = comment?["created"] as? Int
         user = comment?["user"] as? String
@@ -39,13 +38,13 @@ public struct Comment: Equatable {
         stars = comment?["num_stars"] as? Int
         self.comment = comment?["comment"] as? String
     }
-    
+
     public init(id: String?) {
         self.id = id
         self.user = nil
     }
-    
-    public static func ==(lhs: Comment, rhs: Comment) -> Bool {
+
+    public static func == (lhs: Comment, rhs: Comment) -> Bool {
         return lhs.id == rhs.id
     }
 }
