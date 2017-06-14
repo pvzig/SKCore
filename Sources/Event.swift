@@ -119,7 +119,9 @@ public enum MessageSubtype: String {
     case fileShare = "file_share"
     case fileComment = "file_comment"
     case fileMention = "file_mention"
+    case messageReplied = "message_replied"
     case pinnedItem = "pinned_item"
+    case replyBroadcast = "reply_broadcast"
     case unpinnedItem = "unpinned_item"
 }
 

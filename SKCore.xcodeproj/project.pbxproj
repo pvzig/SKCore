@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26113F741EF183CD007E5E45 /* Reply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26113F731EF183CD007E5E45 /* Reply.swift */; };
 		2684F1A31E95AB1800536DCC /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2684F1891E95AB1800536DCC /* Action.swift */; };
 		2684F1A41E95AB1800536DCC /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2684F18A1E95AB1800536DCC /* Attachment.swift */; };
 		2684F1A51E95AB1800536DCC /* AttachmentField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2684F18B1E95AB1800536DCC /* AttachmentField.swift */; };
@@ -88,6 +89,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26113F731EF183CD007E5E45 /* Reply.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reply.swift; sourceTree = "<group>"; };
 		2684F17D1E95AA6900536DCC /* SKCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SKCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2684F1891E95AB1800536DCC /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		2684F18A1E95AB1800536DCC /* Attachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attachment.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				2684F1981E95AB1800536DCC /* Message.swift */,
 				2684F1991E95AB1800536DCC /* OAuthConfig.swift */,
 				2684F19A1E95AB1800536DCC /* Reaction.swift */,
+				26113F731EF183CD007E5E45 /* Reply.swift */,
 				2684F19B1E95AB1800536DCC /* RTMOptions.swift */,
 				2684F19C1E95AB1800536DCC /* Scope.swift */,
 				2684F19D1E95AB1800536DCC /* SlackError.swift */,
@@ -420,6 +423,7 @@
 				2684F1A71E95AB1800536DCC /* Channel.swift in Sources */,
 				2684F1AA1E95AB1800536DCC /* CustomProfileField.swift in Sources */,
 				2684F1B71E95AB1800536DCC /* SlackError.swift in Sources */,
+				26113F741EF183CD007E5E45 /* Reply.swift in Sources */,
 				2684F1B81E95AB1800536DCC /* Team.swift in Sources */,
 				2684F1A61E95AB1800536DCC /* Bot.swift in Sources */,
 				2684F1A41E95AB1800536DCC /* Attachment.swift in Sources */,

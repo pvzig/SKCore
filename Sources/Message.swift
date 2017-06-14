@@ -25,6 +25,10 @@ public final class Message: Equatable {
     public let type = "message"
     public let subtype: String?
     public var ts: String?
+    public var threadTs: String?
+    public let parentUserId: String?
+    public var replyCount: Int?
+    public var replies: [Reply]?
     public let user: String?
     public let channel: String?
     public var hidden: Bool?
@@ -53,6 +57,10 @@ public final class Message: Equatable {
     public init(dictionary: [String: Any]?) {
         subtype = dictionary?["subtype"] as? String
         ts = dictionary?["ts"] as? String
+        threadTs = dictionary?["thread_ts"] as? String
+        parentUserId = dictionary?["parent_user_id"] as? String
+        replyCount = dictionary?["reply_count"] as? Int
+        replies = (dictionary?["replies"] as? [[String: Any]])?.map({ Reply(reply: $0) })
         user = dictionary?["user"] as? String
         channel = dictionary?["channel"] as? String
         hidden = dictionary?["hidden"] as? Bool
@@ -81,6 +89,8 @@ public final class Message: Equatable {
 
     public init(ts: String?) {
         self.ts = ts
+        threadTs = nil
+        parentUserId = nil
         subtype = nil
         user = nil
         channel = nil
@@ -95,6 +105,6 @@ public final class Message: Equatable {
     }
 
     public static func == (lhs: Message, rhs: Message) -> Bool {
-        return lhs.ts == rhs.ts && lhs.user == rhs.user && lhs.text == rhs.text
+        return lhs.ts == rhs.ts && lhs.threadTs == rhs.threadTs && lhs.user == rhs.user && lhs.text == rhs.text
     }
 }
