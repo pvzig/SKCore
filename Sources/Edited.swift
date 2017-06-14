@@ -22,11 +22,10 @@
 // THE SOFTWARE.
 
 public struct Edited {
-    
     public let user: String?
     public let ts: String?
-    
-    public init(edited:[String: Any]?) {
+
+    public init(edited: [String: Any]?) {
         user = edited?["user"] as? String
         ts = edited?["ts"] as? String
     }

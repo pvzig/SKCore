@@ -22,7 +22,6 @@
 // THE SOFTWARE.
 
 public struct Team {
-    
     public let id: String?
     public var name: String?
     public var domain: String?
@@ -32,7 +31,7 @@ public struct Team {
     public var prefs: [String: Any]?
     public var plan: String?
     public var icon: TeamIcon?
-    
+
     public init(team: [String: Any]?) {
         id = team?["id"] as? String
         name = team?["name"] as? String

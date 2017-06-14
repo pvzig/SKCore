@@ -24,14 +24,12 @@
 import Foundation
 
 public extension Date {
-
     var slackTimestamp: Double {
         return NSNumber(value: timeIntervalSince1970).doubleValue
     }
 }
 
 public extension String {
-    
     var slackFormatEscaping: String {
         var escapedString = replacingOccurrences(of: "&", with: "&amp;")
         escapedString = replacingOccurrences(of: "<", with: "&lt;")
@@ -41,12 +39,21 @@ public extension String {
 }
 
 public extension UInt64 {
-    
     static var nanosecondsPerSecond: UInt64 {
         #if os(Linux)
-        return UInt64(CLOCKS_PER_SEC)
+            return UInt64(CLOCKS_PER_SEC)
         #else
-        return NSEC_PER_SEC
+            return NSEC_PER_SEC
         #endif
     }
+}
+
+public func filterNilParameters(_ parameters: [String: Any?]) -> [String: Any] {
+    var finalParameters = [String: Any]()
+    for (key, value) in parameters {
+        if let unwrapped = value {
+            finalParameters[key] = unwrapped
+        }
+    }
+    return finalParameters
 }

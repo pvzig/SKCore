@@ -22,7 +22,6 @@
 // THE SOFTWARE.
 
 public struct TeamIcon {
-    
     public var image34: String?
     public var image44: String?
     public var image68: String?
@@ -31,7 +30,7 @@ public struct TeamIcon {
     public var image132: String?
     public var imageOriginal: String?
     public var imageDefault: Bool?
-    
+
     public init(icon: [String: Any]?) {
         image34 = icon?["image_34"] as? String
         image44 = icon?["image_44"] as? String

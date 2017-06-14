@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2684F1E61E95ABD600536DCC"
-               BuildableName = "SKCore tvOS.framework"
+               BuildableName = "SKCore.framework"
                BlueprintName = "SKCore tvOS"
                ReferencedContainer = "container:SKCore.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2684F1E61E95ABD600536DCC"
-            BuildableName = "SKCore tvOS.framework"
+            BuildableName = "SKCore.framework"
             BlueprintName = "SKCore tvOS"
             ReferencedContainer = "container:SKCore.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2684F1E61E95ABD600536DCC"
-            BuildableName = "SKCore tvOS.framework"
+            BuildableName = "SKCore.framework"
             BlueprintName = "SKCore tvOS"
             ReferencedContainer = "container:SKCore.xcodeproj">
          </BuildableReference>

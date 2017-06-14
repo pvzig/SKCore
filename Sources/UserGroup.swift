@@ -22,7 +22,6 @@
 // THE SOFTWARE.
 
 public struct UserGroup {
-    
     public let id: String?
     public var teamID: String?
     public let isUserGroup: Bool?
@@ -40,7 +39,7 @@ public struct UserGroup {
     public var preferences: [String: Any]?
     public var users: [String]?
     public var userCount: Int?
-    
+
     public init(userGroup: [String: Any]?) {
         id = userGroup?["id"] as? String
         teamID = userGroup?["team_id"] as? String

@@ -24,15 +24,21 @@
 import Foundation
 
 public struct RTMOptions {
-    
     public let simpleLatest: Bool
     public let noUnreads: Bool
     public let mpimAware: Bool
     public let pingInterval: TimeInterval
     public let timeout: TimeInterval
     public let reconnect: Bool
-    
-    public init(simpleLatest: Bool = false, noUnreads: Bool = false, mpimAware: Bool = true, pingInterval: TimeInterval = 30, timeout: TimeInterval = 300, reconnect: Bool = true) {
+
+    public init(
+        simpleLatest: Bool = false,
+        noUnreads: Bool = false,
+        mpimAware: Bool = true,
+        pingInterval: TimeInterval = 30,
+        timeout: TimeInterval = 300,
+        reconnect: Bool = true
+    ) {
         self.simpleLatest = simpleLatest
         self.noUnreads = noUnreads
         self.mpimAware = mpimAware

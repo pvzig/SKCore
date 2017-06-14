@@ -22,7 +22,6 @@
 // THE SOFTWARE.
 
 public struct Channel {
-    
     public let id: String?
     public let created: Int?
     public let creator: String?
@@ -48,7 +47,7 @@ public struct Channel {
     public var pinnedItems = [Item]()
     public var usersTyping = [String]()
     public var messages = [String: Message]()
-    
+
     public init(channel: [String: Any]?) {
         id = channel?["id"] as? String
         name = channel?["name"] as? String
@@ -77,8 +76,8 @@ public struct Channel {
             latest = Message(ts: channel?["latest"] as? String)
         }
     }
-    
-    public init(id:String?) {
+
+    public init(id: String?) {
         self.id = id
         created = nil
         creator = nil

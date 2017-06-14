@@ -160,7 +160,8 @@ public class Event {
     public let subteam: UserGroup?
     public let subteamID: String?
     public var profile: CustomProfile?
-    
+
+    //swiftlint:disable function_body_length
     public init(_ event: [String: Any]) {
         type = EventType(rawValue: event["type"] as? String ?? "ok")
         ts = event["ts"] as? String

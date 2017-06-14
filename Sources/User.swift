@@ -22,9 +22,7 @@
 // THE SOFTWARE.
 
 public struct User {
-    
     public struct Profile {
-        
         public var firstName: String?
         public var lastName: String?
         public var realName: String?
@@ -37,7 +35,7 @@ public struct User {
         public var image72: String?
         public var image192: String?
         public var customProfile: CustomProfile?
-        
+
         public init(profile: [String: Any]?) {
             firstName = profile?["first_name"] as? String
             lastName = profile?["last_name"] as? String
@@ -53,7 +51,7 @@ public struct User {
             customProfile = CustomProfile(customFields: profile?["fields"] as? [String: Any])
         }
     }
-    
+
     public let id: String?
     public var name: String?
     public var deleted: Bool?
@@ -76,7 +74,7 @@ public struct User {
     public var preferences: [String: Any]?
     // Client properties
     public var userGroups: [String: String]?
-    
+
     public init(user: [String: Any]?) {
         id = user?["id"] as? String
         name = user?["name"] as? String
@@ -98,7 +96,7 @@ public struct User {
         timeZoneOffSet = user?["tz_offset"] as? Int
         preferences = user?["prefs"] as? [String: Any]
     }
-    
+
     public init(id: String?) {
         self.id = id
         self.isBot = nil
