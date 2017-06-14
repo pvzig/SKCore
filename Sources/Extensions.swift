@@ -47,3 +47,13 @@ public extension UInt64 {
         #endif
     }
 }
+
+public func filterNilParameters(_ parameters: [String: Any?]) -> [String: Any] {
+    var finalParameters = [String: Any]()
+    for (key, value) in parameters {
+        if let unwrapped = value {
+            finalParameters[key] = unwrapped
+        }
+    }
+    return finalParameters
+}
