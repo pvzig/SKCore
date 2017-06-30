@@ -27,7 +27,6 @@ public struct User {
         public var lastName: String?
         public var realName: String?
         public var email: String?
-        public var skype: String?
         public var phone: String?
         public var image24: String?
         public var image32: String?
@@ -41,7 +40,6 @@ public struct User {
             lastName = profile?["last_name"] as? String
             realName = profile?["real_name"] as? String
             email = profile?["email"] as? String
-            skype = profile?["skype"] as? String
             phone = profile?["phone"] as? String
             image24 = profile?["image_24"] as? String
             image32 = profile?["image_32"] as? String
