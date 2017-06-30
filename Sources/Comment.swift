@@ -31,12 +31,13 @@ public struct Comment: Equatable {
     public var reactions = [Reaction]()
 
     public init(comment: [String: Any]?) {
+        self.comment = comment?["comment"] as? String
         id = comment?["id"] as? String
         created = comment?["created"] as? Int
         user = comment?["user"] as? String
         starred = comment?["is_starred"] as? Bool
         stars = comment?["num_stars"] as? Int
-        self.comment = comment?["comment"] as? String
+        reactions = Reaction.reactionsFromArray(comment?["reactions"] as? [[String: Any]])
     }
 
     public init(id: String?) {
