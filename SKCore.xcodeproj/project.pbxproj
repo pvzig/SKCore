@@ -86,6 +86,8 @@
 		2684F1FF1E95ABD600536DCC /* CustomProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2684F18F1E95AB1800536DCC /* CustomProfile.swift */; };
 		2684F2001E95ABD600536DCC /* UserGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2684F1A21E95AB1800536DCC /* UserGroup.swift */; };
 		2684F2011E95ABD600536DCC /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2684F1891E95AB1800536DCC /* Action.swift */; };
+		820E53AD1F0738D100C103BB /* Reply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26113F731EF183CD007E5E45 /* Reply.swift */; };
+		820E53AE1F0738D100C103BB /* Reply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26113F731EF183CD007E5E45 /* Reply.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -457,6 +459,7 @@
 				2684F1CA1E95ABD400536DCC /* Channel.swift in Sources */,
 				2684F1CB1E95ABD400536DCC /* CustomProfileField.swift in Sources */,
 				2684F1CC1E95ABD400536DCC /* SlackError.swift in Sources */,
+				820E53AD1F0738D100C103BB /* Reply.swift in Sources */,
 				2684F1CD1E95ABD400536DCC /* Team.swift in Sources */,
 				2684F1CE1E95ABD400536DCC /* Bot.swift in Sources */,
 				2684F1CF1E95ABD400536DCC /* Attachment.swift in Sources */,
@@ -490,6 +493,7 @@
 				2684F1EE1E95ABD600536DCC /* Channel.swift in Sources */,
 				2684F1EF1E95ABD600536DCC /* CustomProfileField.swift in Sources */,
 				2684F1F01E95ABD600536DCC /* SlackError.swift in Sources */,
+				820E53AE1F0738D100C103BB /* Reply.swift in Sources */,
 				2684F1F11E95ABD600536DCC /* Team.swift in Sources */,
 				2684F1F21E95ABD600536DCC /* Bot.swift in Sources */,
 				2684F1F31E95ABD600536DCC /* Attachment.swift in Sources */,
