@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "SKCore"
-  s.version          = "4.0.0"
+  s.version          = "4.0.3"
   s.summary          = "Common model objects for use in SlackKit"
   s.homepage         = "https://github.com/SlackKit/SKCore"
   s.license          = 'MIT'
