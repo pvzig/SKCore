@@ -97,6 +97,7 @@ public enum SlackError: String, Error {
     case snoozeEndFailed = "snooze_end_failed"
     case snoozeFailed = "snooze_failed"
     case snoozeNotActive = "snooze_not_active"
+    case teamAddedToOrg = "team_added_to_org"
     case tooLong = "too_long"
     case tooManyEmoji = "too_many_emoji"
     case tooManyReactions = "too_many_reactions"

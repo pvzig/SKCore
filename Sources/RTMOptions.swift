@@ -24,24 +24,33 @@
 import Foundation
 
 public struct RTMOptions {
-    public let simpleLatest: Bool
-    public let noUnreads: Bool
+    public let batchPresenceAware: Bool
     public let mpimAware: Bool
+    public let noLatest: Bool
+    public let noUnreads: Bool
+    public let presenceSub: Bool
+    public let simpleLatest: Bool
     public let pingInterval: TimeInterval
     public let timeout: TimeInterval
     public let reconnect: Bool
 
     public init(
-        simpleLatest: Bool = false,
-        noUnreads: Bool = false,
+        batchPresenceAware: Bool = false,
         mpimAware: Bool = true,
+        noLatest: Bool = false,
+        noUnreads: Bool = false,
+        presenceSub: Bool = false,
+        simpleLatest: Bool = false,
         pingInterval: TimeInterval = 30,
         timeout: TimeInterval = 300,
         reconnect: Bool = true
     ) {
-        self.simpleLatest = simpleLatest
-        self.noUnreads = noUnreads
+        self.batchPresenceAware = batchPresenceAware
         self.mpimAware = mpimAware
+        self.noLatest = noLatest
+        self.noUnreads = noUnreads
+        self.presenceSub = presenceSub
+        self.simpleLatest = simpleLatest
         self.pingInterval = pingInterval
         self.timeout = timeout
         self.reconnect = reconnect
