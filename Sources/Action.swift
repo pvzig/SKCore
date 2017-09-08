@@ -28,6 +28,8 @@ public struct Action {
     public let value: String?
     public let style: ActionStyle?
     public let confirm: Confirm?
+    public let options: [Option]?
+    public let dataSource: DataSource?
 
     public init(action: [String: Any]?) {
         name = action?["name"] as? String
@@ -36,15 +38,20 @@ public struct Action {
         value = action?["value"] as? String
         style = ActionStyle(rawValue: action?["style"] as? String ?? "")
         confirm = Confirm(confirm:action?["confirm"] as? [String: Any])
+        options = (action?["options"] as? [[String: Any]])?.map { Option(option: $0) }
+        dataSource = DataSource(rawValue: action?["data_source"] as? String ?? "")
     }
 
-    public init(name: String, text: String, style: ActionStyle = .defaultStyle, value: String? = nil, confirm: Confirm? = nil) {
-        self.type = "button"
+    public init(name: String, text: String, type: String = "button", style: ActionStyle = .defaultStyle, value: String? = nil,
+                confirm: Confirm? = nil, options: [Option]? = nil, dataSource: DataSource? = nil) {
         self.name = name
         self.text = text
+        self.type = type
         self.value = value
         self.style = style
         self.confirm = confirm
+        self.options = options
+        self.dataSource = dataSource
     }
 
     public var dictionary: [String: Any] {
@@ -55,6 +62,8 @@ public struct Action {
         dict["value"] = value
         dict["style"] = style?.rawValue
         dict["confirm"] = confirm?.dictionary
+        dict["options"] = options?.map { $0.dictionary }
+        dict["data_source"] = dataSource?.rawValue
         return dict
     }
 
@@ -86,6 +95,34 @@ public struct Action {
             dict["dismiss_text"] = dismissText
             return dict
         }
+    }
+
+    public struct Option {
+        public let text: String?
+        public let value: String?
+
+        public init(option: [String: Any]?) {
+            text = option?["text"] as? String
+            value = option?["value"] as? String
+        }
+
+        public init(text: String, value: String) {
+            self.text = text
+            self.value = value
+        }
+
+        public var dictionary: [String: Any] {
+            var dict = [String: Any]()
+            dict["text"] = text
+            dict["value"] = value
+            return dict
+        }
+    }
+
+    public enum DataSource: String {
+        case users
+        case channels
+        case conversations
     }
 }
 
