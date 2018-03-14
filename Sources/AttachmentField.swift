@@ -34,7 +34,7 @@ public struct AttachmentField {
 
     public init(title: String?, value: String?, short: Bool? = nil) {
         self.title = title
-        self.value = value?.slackFormatEscaping
+        self.value = value
         self.short = short
     }
 
