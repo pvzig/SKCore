@@ -29,15 +29,6 @@ public extension Date {
     }
 }
 
-public extension String {
-    var slackFormatEscaping: String {
-        var escapedString = replacingOccurrences(of: "&", with: "&amp;")
-        escapedString = replacingOccurrences(of: "<", with: "&lt;")
-        escapedString = replacingOccurrences(of: ">", with: "&gt;")
-        return escapedString
-    }
-}
-
 public extension UInt64 {
     static var nanosecondsPerSecond: UInt64 {
         #if os(Linux)
