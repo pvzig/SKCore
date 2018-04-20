@@ -25,5 +25,6 @@ struct Helper {
     static let mpim             = try! Data(contentsOf: URL(fileURLWithPath: "\(Helper.rootPath)/mpim.json"))
     static let user             = try! Data(contentsOf: URL(fileURLWithPath: "\(Helper.rootPath)/user.json"))
     static let usergroup        = try! Data(contentsOf: URL(fileURLWithPath: "\(Helper.rootPath)/usergroup.json"))
+    static let events           = try! Data(contentsOf: URL(fileURLWithPath: "\(Helper.rootPath)/events.json"))
   }
 }
