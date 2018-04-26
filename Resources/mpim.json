@@ -1,0 +1,15 @@
+{
+    "id": "G024BE91L",
+    "name": "mpdm-user1--user2--user3-1",
+    "is_mpim": true,
+    "is_group": false,
+    "created": 1360782804,
+    "creator": "U024BE7LH",
+    "members": [
+        "U024BE7LH"
+    ],
+    "last_read": "1401383885.000061",
+    "latest": { },
+    "unread_count": 0,
+    "unread_count_display": 0
+}
