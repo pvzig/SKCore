@@ -26,6 +26,7 @@ public struct Action {
     public let text: String?
     public let type: String?
     public let value: String?
+    public let url: String?
     public let style: ActionStyle?
     public let confirm: Confirm?
     public let options: [Option]?
@@ -36,6 +37,7 @@ public struct Action {
         text = action?["text"] as? String
         type = action?["type"] as? String
         value = action?["value"] as? String
+        url = action?["url"] as? String
         style = ActionStyle(rawValue: action?["style"] as? String ?? "")
         confirm = Confirm(confirm:action?["confirm"] as? [String: Any])
         options = (action?["options"] as? [[String: Any]])?.map { Option(option: $0) }
@@ -43,11 +45,12 @@ public struct Action {
     }
 
     public init(name: String, text: String, type: String = "button", style: ActionStyle = .defaultStyle, value: String? = nil,
-                confirm: Confirm? = nil, options: [Option]? = nil, dataSource: DataSource? = nil) {
+                url: String? = nil, confirm: Confirm? = nil, options: [Option]? = nil, dataSource: DataSource? = nil) {
         self.name = name
         self.text = text
         self.type = type
         self.value = value
+        self.url = url
         self.style = style
         self.confirm = confirm
         self.options = options
@@ -60,6 +63,7 @@ public struct Action {
         dict["text"] = text
         dict["type"] = type
         dict["value"] = value
+        dict["url"] = url
         dict["style"] = style?.rawValue
         dict["confirm"] = confirm?.dictionary
         dict["options"] = options?.map { $0.dictionary }
