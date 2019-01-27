@@ -1,9 +1,5 @@
-# SKCore: SlackKit Models
-![Swift Version](https://img.shields.io/badge/Swift-4.0.3-orange.svg)
-![Plaforms](https://img.shields.io/badge/Platforms-macOS,iOS,tvOS,Linux-lightgrey.svg)
-![License MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg)
-[![SwiftPM compatible](https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-brightgreen.svg)](https://github.com/Carthage/Carthage)
-[![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-brightgreen.svg)](https://cocoapods.org)
+<center><h1>SKCore has been consolidated into <a href="https://www.github.com/pvzig/SlackKit">SlackKit</a><h1></center>
+
+## SKCore: SlackKit Models
 
 SKCore contains the shared model objects used by [SlackKit](https://www.github.com/pvzig/SlackKit) and the other [SlackKit modules](https://www.github.com/pvzig/SlackKit).
