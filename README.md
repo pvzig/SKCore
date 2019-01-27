@@ -6,4 +6,4 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-brightgreen.svg)](https://github.com/Carthage/Carthage)
 [![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-brightgreen.svg)](https://cocoapods.org)
 
-SKCore contains the shared model objects used by [SlackKit](https://www.github.com/SlackKit/SlackKit) and the other [SlackKit modules](https://www.github.com/SlackKit).
+SKCore contains the shared model objects used by [SlackKit](https://www.github.com/pvzig/SlackKit) and the other [SlackKit modules](https://www.github.com/pvzig/SlackKit).
